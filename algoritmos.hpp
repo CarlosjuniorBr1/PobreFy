@@ -13,5 +13,6 @@ void show_vetor(std::string * M);
 void ordena_vetor_fila(std::string* vetor, int inicio, int final);
 
 void separa_vetor_fila(std::string * vetor, int inicio, int final);
+musica buscamusica(musica * array, std::string strnome);
 
 #endif

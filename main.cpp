@@ -8,7 +8,7 @@
 #include <filesystem>
 #include "Acervo.hpp"
 
-void vaiporra();
+
 Playlist p1;
 int main()
 {
@@ -17,14 +17,14 @@ int main()
     // Musica musicas[22];
     //criar_coletenea(&coletaneadisp,acervo);
     fila * primeira = new_fila();
-    vaiporra();
+    
     int escolha;
     
     do
     {
         system("clear");
-        std::cout << "===================== \u2605\u2605\u2605 PobreFy \u2605\u2605\u2605 =====================\n\n";
-        std::cout << "Opcoes:\n(1) Criar/Inserir fila de reproducao\n(2) Exibir fila de reproducao\n(3) Excluir elementos da fila\n(4) Reproduzir\n(5) Criar Playlist e Inserir\n(6) Encerrar\n";
+        std::cout << "========================================================================================= \u2605\u2605\u2605 PobreFy \u2605\u2605\u2605 ============================================================\n\n";
+        std::cout << "Opcões:\n\n(1) Criar/Inserir fila de reproducao\n(2) Exibir fila de reproducao\n(3) Excluir elementos da fila\n(4) Reproduzir\n(5) Criar Playlist e Inserir\n(6) Encerrar\n";
 
         std::cin >> escolha;
 
@@ -172,29 +172,53 @@ int main()
 
             case 5:
             {
-                std::cout<<"Nome para playlista: ";
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpa o buffer de entrada
+
+                std::cout << "Nome para playlist: ";
                 std::string nome_playlist;
-                getchar();
                 getline(std::cin, nome_playlist);
+
                 Playlist playlist = criar_playlist(nome_playlist);
-                std:: 
-                cout<<"\nPLAYLIST CRIADA COM SUCESSO\n\n";
-                pause(1);
+                std::cout << "\nPLAYLIST CRIADA COM SUCESSO\n\n";
+                pause(2);
                 system("clear");
-                std::cout<<"\n\t\tEssas são nossas músicas disponíveis\n\n";
-                std::string * vetor1 = get_vetor_acervo(acervo);
+                std::cout << "\n\t\tEssas são nossas músicas disponíveis\n\n";
+                std::string *vetor1 = get_vetor_acervo(acervo);
                 show_vetor(vetor1);
 
-                
-                 
+                // Aguarde a entrada do usuário antes de retornar ao menu
+                //std::cout << "\nPressione Enter para retornar ao menu...";
+                // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpa o buffer de entrada
+                // getchar(); // Aguarda o usuário pressionar Enter
+
+                std::cout<<"\nQuer adicionar quantas músicas ? ";
+                int n;
+                std::cin>>n;
+
+                std:: string straux;
+                getchar();
+                // getchar();
+                for(int i = 1; i<=n;i++){
+                    std::cout<<"Música numero ("<<i<<"): ";
+                    getline(std::cin,straux);
+                    inserir_no_fim(&playlist,buscamusica(acervo,straux));
+                    
+                }
+                //pause(2);
+                //system("clear");
+                std::cout<<"musicas que foram adicionadas:\n\n\n";
+                mostrando_playlist(playlist);
+                std::cout<<"\n\n";
+
                 break;
             }
+
 
             case 6:
                 std::cout<<"\t Obrigado por utilizar o PobreFy. Volte sempre!!\n";
                 break;
 
-            deafult:
+            default:
                 std::cout << "Opcao Invalida";
                 break;
         }
@@ -206,28 +230,3 @@ int main()
 }
 
 
-void vaiporra(){
-    inserir_no_inicio(&p1,acervo[0]);
-     inserir_no_fim(&p1,acervo[1]);
-      inserir_no_fim(&p1,acervo[2]);
-      inserir_no_fim(&p1,acervo[3]);
-      inserir_no_fim(&p1,acervo[4]);
-      inserir_no_fim(&p1,acervo[5]);
-      inserir_no_fim(&p1,acervo[6]);
-      inserir_no_fim(&p1,acervo[7]);
-      inserir_no_fim(&p1,acervo[8]);
-      inserir_no_fim(&p1,acervo[9]);
-      inserir_no_fim(&p1,acervo[10]);
-      inserir_no_fim(&p1,acervo[11]);
-      inserir_no_fim(&p1,acervo[12]);
-      inserir_no_fim(&p1,acervo[13]);
-      inserir_no_fim(&p1,acervo[14]);
-      inserir_no_fim(&p1,acervo[15]);
-      inserir_no_fim(&p1,acervo[16]);
-      inserir_no_fim(&p1,acervo[17]);
-      inserir_no_fim(&p1,acervo[18]);
-      inserir_no_fim(&p1,acervo[19]);
-      inserir_no_fim(&p1,acervo[20]);
-      inserir_no_fim(&p1,acervo[21]);
-  
-}

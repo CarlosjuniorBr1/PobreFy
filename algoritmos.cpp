@@ -91,3 +91,13 @@ void separa_vetor_fila(std::string * vetor, int inicio, int final) {
         ordena_vetor_fila(vetor, inicio, meio, final);
     }
 }
+
+musica buscamusica(musica * array,std::string strnome){
+    musica resul;
+    for(int i = 0; i<22;i++){
+        if(strnome == array[i].Nome_musica){
+            resul = array[i];
+        }
+    }
+    return resul;
+}
