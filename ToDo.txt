@@ -1,0 +1,56 @@
+Strutcts
+    Música (String Nome da musica, String nome do artistia, string endereço); check
+Lista:
+    Playlist - Pronto
+    remover - pronto
+    deletar - 
+    
+     
+Fila:
+    Reproducao - Pronto
+Main:
+    Main
+Armazen de musicas:
+    Arquivo?
+    Banco de Dados?
+
+TADS:
+    Fila pronto
+    Lista pronto
+    Música; check
+
+
+
+
+
+====================================
+1 - Cartoon, Jéja - On & On        =     
+2 - DKM -  Pluckandplay            =
+3 - DKM - Beside Me                ================
+4 - DKM - FynestLyk                                                             
+5 - Ofshane - Make You Move
+6 - Dkm - MydNyte
+7 - DKM - No Starlight Dey Beat
+8 - DKM - Knowpe
+9 - DKM - It's Almost Over
+10 - DKM - Circle Dance
+11 - DKM - Soft Knives
+12 - DKM - Animal Beast 
+13 - DKM - Smooth and Cool
+14 - DKM - Sunny Travel
+15 - Dkm - Nine Lives
+16 - DKM - Rhythm in You
+17 - Cxdy - Fallacy   
+18 - Time Ofshane - One More
+19 - Around - Splashing 
+20 - DKM - As You Fade Away
+21 - DKM - Play Dead
+22 - DKM - Enough
+23 - DKM - Winning
+24 - DKM - Get Through
+25 - DKM - No Filter 
+26 - DKM - GO 
+27 - DKM - Retribuition
+28 - DKM - Tough 
+29 - DKM - Ruthless
+30 -  DKM - Take Me Back
